@@ -18,13 +18,13 @@ export default function SmallTab({ title, order, isPressed, onPress }: props) {
             bg2 = "bg-[#ebebeb] rounded-t-lg";
         } else if (order.indexOf(isPressed) != 0 && order[order.indexOf(isPressed) - 1] == title) {
             bg = "rounded-t-xl rounded-bl-xl";
-            bg2 = "bg-[#d15abf] rounded-lg";
+            bg2 = "bg-[#333] rounded-lg";
         } else if (order.indexOf(isPressed) != order.length-1 && order[order.indexOf(isPressed) + 1] == title) {
             bg = "rounded-t-xl rounded-br-xl";
-            bg2 = "bg-[#d15abf] rounded-lg";
+            bg2 = "bg-[#333] rounded-lg";
         } else {
             bg = "rounded-xl";
-            bg2 = "bg-[#d15abf] rounded-lg";
+            bg2 = "bg-[#333] rounded-lg";
         }
 
     return (
@@ -32,7 +32,7 @@ export default function SmallTab({ title, order, isPressed, onPress }: props) {
             <View 
             className={`flex-1 items-center py-2 px-4 ${bg2}`}
             >
-                <Text className={`text-md font-semibold ${isPressed == title ? "text-[#d15abf]" : "text-[#ebebeb]"}`}>
+                <Text className={`text-md font-semibold ${isPressed == title ? "text-[#333]" : "text-[#ebebeb]"}`}>
                     {title}
                 </Text>
             </View>

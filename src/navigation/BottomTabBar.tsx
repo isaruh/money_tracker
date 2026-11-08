@@ -5,7 +5,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 export default function BottomTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
     return (
         <View className="absolute w-full bottom-8 px-8 items-center justify-center">
-            <View className="flex-row bg-[#d15abf] gap-8 rounded-full justify-between items-center px-8 py-4 shadow-xl shadow-slate-500">
+            <View className="flex-row bg-[#333] gap-8 rounded-full justify-between items-center px-8 py-4 shadow-xl shadow-slate-500">
                 {state.routes.map((route, index) => {
                     const isFocused = state.index === index;
 
@@ -37,8 +37,8 @@ export default function BottomTabBar({ state, descriptors, navigation }: BottomT
                         onPress={onPress}
                         className="items-center justify-between p-2"
                         >
-                            <Ionicons name={iconName} size={24} color={isFocused ? "#fff" : "#ffb8f4"} />
-                            <Text className={isFocused ? "text-[#fff]" : "text-[#ffb8f4]"} >{route.name}</Text>
+                            <Ionicons name={iconName} size={16} color={isFocused ? "#fff" : "#999"} />
+                            <Text className={isFocused ? "text-[#fff] text-sm" : "text-[#999] text-sm"} >{route.name}</Text>
                         </TouchableOpacity>
                     );
                 })}
